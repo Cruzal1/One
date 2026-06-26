@@ -22,6 +22,7 @@ SPEECH = {
     "Korean": "ko",
     "Turkish": "tr",
     "Dutch": "nl"
+    "Dari": "fa"
 }
 TRANS = SPEECH.copy()
 langs = list(SPEECH.keys())
