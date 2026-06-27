@@ -23,7 +23,6 @@ SPEECH = {
     "Turkish": "tr",
     "Dutch": "nl",
     "Dari": "fa"
- 
 }
 TRANS = SPEECH.copy()
 langs = list(SPEECH.keys())
@@ -48,11 +47,11 @@ st.markdown("<h1 style='text-align: center; color: #1E3A8A;'>🌐 ESOL Live Tran
 st.markdown("<p style='text-align: center; color: #4B5563; font-size: 1.2rem;'>Speak into your microphone and get instant translations across multiple languages.</p>", unsafe_allow_html=True)
 st.divider()
 
-# Layout layout split
-left, right = st.columns(2)
+# Layout layout split adjusted: [2, 3] gives the right column 60% of the width
+left, right = st.columns([2, 3])
 
 with left:
-    st.markdown("### 🎛️ Input Controls")
+    st.markdown("###  Input Controls")
     in_lang = st.selectbox("Select Input Language", langs)
 
     st.markdown("### 🎙️ Speak")
@@ -83,7 +82,7 @@ with left:
         st.rerun()
 
 with right:
-    st.markdown("### 📢 Live Translations")
+    st.markdown("###  Live Translations")
     
     # Defaults changed slightly to safely index within the expanded list
     for i, default in enumerate([1, 2, 3], start=1):
